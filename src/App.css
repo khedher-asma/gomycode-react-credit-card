@@ -1,0 +1,10 @@
+
+@media Screen and (max-width:1000px){
+ 
+}
+@media Screen and (max-width:875px){
+  .App {
+      display: flex;
+      flex-direction: column !important;
+  }
+}

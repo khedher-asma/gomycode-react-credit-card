@@ -1,0 +1,33 @@
+form {
+    margin-left: 1.5rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+input{
+width:250px;
+border-radius: 5px;
+margin: 0.3rem 0;
+}
+@media Screen and (max-width:875px){
+    form {
+        margin-top: 4rem;
+        margin-left: 33%;
+
+    }
+  }
+ 
+  @media Screen and (max-width:600px){
+    form {
+        margin-top: 4rem;
+        margin-left: 30%;
+
+    }
+  }
+  @media Screen and (max-width:500px){
+    form {
+        margin-top: 4rem;
+        margin-left: 25%;
+
+    }
+  }
