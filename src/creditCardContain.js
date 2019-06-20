@@ -41,18 +41,16 @@ class CardContain extends React.Component {
   handleDateChange(e) {
     let reg = /^[0-9]*$/
     if(reg.test(e.target.value)){
+      if(e.target.value[0]+e.target.value[1] > 12)  e.target.value=e.target.value[0]
+      if(e.target.value[0]> 1 ) e.target.value=''
       let date
-      if(e.target.value.length === 1 ){
-        date=e.target.value+'•/••'
-
-      }else if(e.target.value.length === 2){
+      if(e.target.value.length === 2){
         date=e.target.value+'/'+'••'
       }else if(e.target.value.length === 3){
         date=e.target.value.slice(0,2)+'/'+e.target.value.slice(2)+'•'
       }else if(e.target.value.length === 4){
         date=e.target.value.slice(0,2)+'/'+e.target.value.slice(2)
       }
-      
       this.setState({
         date: e.target.value
       }, () => this.props.updateState(this.state.cardNumber, this.state.holderName, date)
